@@ -29,7 +29,7 @@ const Form = () => {
       <div className={styles.container__calc}>
         <h1 className={styles.container__calc__title}>Calculadora IMC</h1>
         <form className={styles.container__calc__title__form}>
-          <label htmlFor="altura">Altrua:</label>
+          <label htmlFor="altura">Altura:</label>
           <IMaskInput mask="0.00m" type="number" name="altura" id="altura" placeholder='0,00' onChange={e => setAltura(parseFloat(e.target.value))} required />
           <label htmlFor="peso">Peso:</label>
           <IMaskInput mask="000.00" type="number" name="peso" id="peso" placeholder='000,00' onChange={e => setPeso(parseFloat(e.target.value))} required />
