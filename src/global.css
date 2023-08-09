@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --colorOne: #2a363b;
+  --colorTwo: #e84a5f;
+  --colorThree: #fecea8;
+  --colorTextOne: #ccc;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--colorThree);
+}

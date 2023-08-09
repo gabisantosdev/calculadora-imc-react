@@ -1,0 +1,69 @@
+.container__calc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 450px;
+  border-radius: 32px;
+  background-color: var(--colorOne);
+  color: var(--colorTextOne);
+}
+
+.container__calc__title__form__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container__calc__title__form__buttons__buttonOne,
+.container__calc__title__form__buttons__buttonTwo {
+  padding: 8px 16px;
+  margin: 32px 0 32px 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.container__calc__title__form__buttons__buttonOne {
+  background-color: var(--colorTwo);
+  margin-right: 16px;
+}
+
+.container__calc__title__form__buttons__buttonTwo {
+  background-color: var(--colorThree);
+}
+
+.container__calc__title {
+  font-size: 2.5rem;
+  margin-top: 32px;
+}
+
+.container__calc__title__form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 32px;
+  font-size: 2rem;
+}
+
+.container__calc__title__form input {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  padding: 8px;
+  text-align: center;
+}
+
+.container__calc__result {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 32px 32px 32px;
+  gap: 16px;
+  color: var(--colorTwo);
+}
+
+.container__calc__result__imc {
+  font-size: 2rem;
+}
