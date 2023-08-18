@@ -8,20 +8,6 @@ const Form = () => {
   const [peso, setPeso] = useState(0);
   const imc = peso / (altura * altura);
 
-  const grauDeObesidade = () => {
-    if (imc < 18.5) {
-      return <span>MENOR QUE 18,5 -	MAGREZA -	Grau 0</span>
-    } else if (imc > 18.5 && imc <= 24.9) {
-      return <span>ENTRE 18,5 E 24,9 -	NORMAL -	Grau 0</span>
-    } else if (imc > 24.9 && imc <= 29.9) {
-      return <span>ENTRE 25,0 E 29,9 -	SOBREPESO -	Grau I</span>
-    } else if (imc > 29.9 && imc <= 39.9) {
-      return <span>ENTRE 30,0 E 39,9 -	OBESIDADE -	Grau II</span>
-    } else {
-      return <span>MAIOR QUE 40,0 -	OBESIDADE GRAVE -	Grau III</span>
-    }
-  }
-
   const [resultadoEstaVisivel, setResultadoEstaVisivel] = useState(false);
 
   return (
@@ -41,7 +27,11 @@ const Form = () => {
         {resultadoEstaVisivel && (
           <div className={styles.container__calc__result}>
             <span className={styles.container__calc__result__imc}>IMC: {imc.toFixed(2)}</span>
-            <span>{grauDeObesidade()}</span>
+            {(imc < 18.5) && <span>MENOR QUE 18,5 -	MAGREZA -	Grau 0</span>}
+            {(imc > 18.5 && imc <= 24.9) && <span>ENTRE 18,5 E 24,9 -	NORMAL -	Grau 0</span>}
+            {(imc > 24.9 && imc <= 29.9) && <span>ENTRE 25,0 E 29,9 -	SOBREPESO -	Grau I</span>}
+            {(imc > 29.9 && imc <= 39.9) && <span>ENTRE 30,0 E 39,9 -	OBESIDADE -	Grau II</span>}
+            {(imc > 39.9) && <span>MAIOR QUE 40,0 -	OBESIDADE GRAVE -	Grau III</span>}
           </div>
         )}
       </div>
